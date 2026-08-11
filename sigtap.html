@@ -7,32 +7,6 @@
 
 <link rel="stylesheet" href="style.css">
 
-<script>
-
-function filtrar(){
-
-    let filtro =
-        document.getElementById("txtBusca")
-        .value
-        .toUpperCase();
-
-    let linhas =
-        document.querySelectorAll("#tbl tbody tr");
-
-    linhas.forEach(function(linha){
-
-        let texto =
-            linha.innerText.toUpperCase();
-
-        linha.style.display =
-            texto.includes(filtro)
-            ? ""
-            : "none";
-    });
-}
-
-</script>
-
 </head>
 
 <body>
@@ -53,7 +27,21 @@ NIS - Wiki Santa
 
 <div class="conteudo">
 
-<h2>SIGTAP</h2>
+<h1>Tabela SIGTAP</h1>
+
+<p>
+Esta página contém informações da Tabela SIGTAP
+(Sistema de Gerenciamento da Tabela de Procedimentos,
+Medicamentos, Órteses, Próteses e Materiais Especiais do SUS).
+
+Os dados apresentam os códigos dos procedimentos,
+descrições, classificações, grupos, subgrupos e demais
+informações utilizadas para faturamento, regulação,
+produção assistencial e gestão hospitalar.
+
+A pesquisa abaixo permite localizar rapidamente
+procedimentos e códigos SIGTAP cadastrados.
+</p>
 
 <table id="tbl">
 
